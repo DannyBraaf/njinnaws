@@ -3,7 +3,6 @@ import boto3
 
 class EcCreateInstance:
 
-
     def run(self):
 
         ec2 = boto3.resource('ec2')
@@ -16,11 +15,11 @@ class EcCreateInstance:
             DryRun=self.dryrunEnabled,
             KeyName=self.KeyName,
             SecurityGroupIds=[
-            
-                print "'"+ str(self.secGroup) +"'"
-               
+
+                "'"self.secGroup"'"
+
             ],
-            InstanceType=print "'"+ str(self.InstanceType) +"'",
+            InstanceType="'"self.InstanceType"'",
             Placement={
                 'Tenancy': 'default'
             },
@@ -28,7 +27,7 @@ class EcCreateInstance:
                 'Enabled': self.MonitoringEnabled
             },
             DisableApiTermination=False,
-            InstanceInitiatedShutdownBehavior=print "'"+ str(self.InstanceShutdownbehavior) +"'",
+            InstanceInitiatedShutdownBehavior="'"self.InstanceShutdownbehavior"'",
             CreditSpecification={
                 'CpuCredits': 'CpuCredits'
             },
@@ -37,7 +36,7 @@ class EcCreateInstance:
             # Open = Adds Instance to any existing Reserved Capacity that is available
             # None = Runs as On-Demand instance (First Come First Served)
             CapacityReservationSpecification={
-                'CapacityReservationPreference': "'"+ str(self.CapacityReservationPreference) +"'"
+                'CapacityReservationPreference': "'"self.CapacityReservationPreference"'"
             },
             UserData="""""",
             BlockDeviceMappings=[
@@ -74,8 +73,8 @@ class EcCreateInstance:
         #    PublicIpAddress = instances[0].public_ip_address
 
         result = {'instanceid': instanceid, 'PublicIpAddress': PublicIpAddress,
-                'privateIpAddress': privateIpAddress}
+                  'privateIpAddress': privateIpAddress}
         print(PublicIpAddress)
         print(instanceid)
         print(result)
-        return { "instanceid" : instanceid }
+        return {"instanceid": instanceid}
