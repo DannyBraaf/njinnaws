@@ -112,3 +112,21 @@ actions:
         required: true
         description: AWS Ec2 Instance IDs to Terminate (separate by ,)
         order: 20
+  ec2getinstanceinfo:
+    title: AWS get EC2 Instance info
+    description: get EC2 Instance info
+    path: src.ecgetinstanceinfo:EcGetinstanceinfo
+    icon: fab fa-aws
+    parameters:
+      dryrunEnabled:
+        type: boolean
+        title: Dry Run
+        required: true
+        description: true or false
+        order: 10
+      Instanceids:
+        type: string
+        title: AWS Instance IDs
+        required: true
+        description: AWS Ec2 Instance IDs to Terminate (separate by ,)
+        order: 20
