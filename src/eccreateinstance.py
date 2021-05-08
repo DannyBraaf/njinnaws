@@ -6,6 +6,7 @@ class EcCreateInstance:
     def run(self):
 
         ec2 = boto3.resource('ec2')
+        
 
         # create a new EC2 instance
         instances = ec2.create_instances(
