@@ -11,6 +11,7 @@ class EcCreateInstance:
 
         # create a new EC2 instance
         instances = ec2.create_instances(
+            secgrp = "'"+self.SecGroup+"'"
             ImageId=self.imageId,
             MaxCount=self.MaxCount,
             MinCount=self.MinCount,
@@ -18,7 +19,7 @@ class EcCreateInstance:
             KeyName=self.KeyName,
             SecurityGroupIds=[
 
-                'self.SecGroup'
+                secgrp 
 
             ],
             InstanceType=self.InstanceType,
