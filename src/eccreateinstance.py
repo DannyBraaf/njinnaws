@@ -7,12 +7,10 @@ class EcCreateInstance:
         
 
         ec2 = boto3.resource('ec2',region_name=self.region)
-        list1 = [self.SecGroup]
-        listToStr = ' '.join(map(str, list1)
+        
 
         # create a new EC2 instance
         instances = ec2.create_instances(
-            list1 = [self.SecGroup]
             ImageId=self.imageId,
             MaxCount=self.MaxCount,
             MinCount=self.MinCount,
@@ -20,7 +18,7 @@ class EcCreateInstance:
             KeyName=self.KeyName,
             SecurityGroupIds=[
 
-                listToStr
+               self.SecGroup
 
             ],
             InstanceType=self.InstanceType,
