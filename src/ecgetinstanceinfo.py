@@ -8,16 +8,8 @@ class EcGetinstanceinfo:
 
         client = boto3.client('ec2',region_name=self.region)
         response = client.describe_instances(
-            Filters=[
-                {
-                    'Name': 'string',
-                    'Values': [
-                        'string',
-                    ]
-                },
-            ],
             InstanceIds=[
-                self.Instanceids,
+              self.Instanceids,
             ],
             DryRun=self.dryrunEnabled,
             MaxResults=123,
