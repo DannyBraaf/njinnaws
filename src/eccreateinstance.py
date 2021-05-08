@@ -7,8 +7,8 @@ class EcCreateInstance:
 
         ec2 = boto3.resource('ec2')
         
-        
-        secgroup = print("[""'"+ self.secGroup  +"'""]")
+        sec = self.secGroup
+        secgroup = print("[""'"+ secgroup +"'""]")
 
         # create a new EC2 instance
         instances = ec2.create_instances(
