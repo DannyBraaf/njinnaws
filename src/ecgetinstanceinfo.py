@@ -4,9 +4,8 @@ import boto3
 class EcGetinstanceinfo:
 
     def run(self):
-
-        ec2 = boto3.resource('ec2')
-        response = ec2.describe_instances(
+        client = boto3.client('ec2')
+        response = client.describe_instances(
             Filters=[
                 {
                     'Name': 'string',
