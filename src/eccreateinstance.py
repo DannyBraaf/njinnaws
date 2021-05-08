@@ -1,6 +1,6 @@
 import boto3
-class Ec2CreateInstance:
 
+class EcCreateInstance():
 
 def run(self):
 

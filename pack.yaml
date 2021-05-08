@@ -6,8 +6,8 @@ description: |
 actions:
   ec2createinstance:
      title: AWS Create EC2 Instance
-     description: Create and Start Ec2 Instance in AWS
-     path: src.ec2.ec2createinstance:Ec2CreateInstance
+     description: Create and Start Ec2 Instance on AWS
+     path: src.eccreateinstance:EcCreateInstance
      icon: fab fa-aws
      parameters:
       dryrunEnabled:
@@ -69,6 +69,12 @@ actions:
         title: Capacity Reservation Specification
         required: true
         description: none or open
+        order: 100
+      userData:
+        type: text
+        title: user data
+        required: false
+        description: script to execute on startup of instance
         order: 100
       VolumesizeinGB:
         type: string
