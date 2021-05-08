@@ -3,21 +3,8 @@ name: AWS
 title: AWS
 description: |
   AWS-Integration
-#config-schemes:
-  #authentication:
-  #  type: object
-  #  title: Authentication Information
-  #  required: false
-  #  description: Authentication Information
-  #  properties:
-  #    token:
-  #      type: string
-  #      title: Access Token
-  #      required: true
-  #      description: Token used to authenticate with Slack ('https://api.slack.com/custom-integrations/legacy-tokens')
-  #      order: 10
 actions:
-  EC2CreateInstance:
+ EC2CreateInstance:
    title: AWS Create EC2 Instance
    description: Create Ec2 Instance in AWS
    path: actions:ec2CreateInstance
@@ -89,11 +76,3 @@ actions:
         required: true
         description: true = will be deleted false= will not be deleted
         order: 110 
-#      authentication:
-#        $ref: "#authentication"
-#        order: 30
-#    output:
-#      response:
-#        title: API response
-#        description: API repsonse for message sent
- 
