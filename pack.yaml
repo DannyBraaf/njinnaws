@@ -166,3 +166,27 @@ actions:
         required: true
         description: AWS Region 
         order: 20
+  ec2listallinstanceidsinregion:
+    title: AWS list all instance ids in region
+    description: AWS list all instance ids in region
+    path: src.getallrunninginstances:Execute
+    icon: fab fa-aws
+    parameters:
+      dryrunEnabled:
+        type: boolean
+        title: Dry Run
+        required: true
+        description: true or false
+        order: 10
+      instancestate:
+        type: string
+        title: Instance state
+        required: true
+        description: search for Instance in Instance state (running, stopped, terminated)
+        order: 30
+      region:
+        type: string
+        title: AWS region
+        required: true
+        description: AWS Region 
+        order: 30
