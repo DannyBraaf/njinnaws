@@ -16,7 +16,7 @@ class EcCreateInstance:
             DryRun=self.dryrunEnabled,
             KeyName=self.KeyName,
             SecurityGroupIds=[
-                ' + self.secGroup + '
+                '+ self.secGroup +'
             ],
             InstanceType=self.InstanceType,
             Placement={
@@ -26,7 +26,7 @@ class EcCreateInstance:
                 'Enabled': self.MonitoringEnabled
             },
             DisableApiTermination=False,
-            InstanceInitiatedShutdownBehavior=' + self.InstanceShutdownbehavior + ",
+            InstanceInitiatedShutdownBehavior='+ self.InstanceShutdownbehavior +',
             CreditSpecification={
                 'CpuCredits': 'CpuCredits'
             },
@@ -35,7 +35,7 @@ class EcCreateInstance:
             # Open = Adds Instance to any existing Reserved Capacity that is available
             # None = Runs as On-Demand instance (First Come First Served)
             CapacityReservationSpecification={
-                'CapacityReservationPreference': ' + self.CapacityReservationPreference +'
+                'CapacityReservationPreference': '+ self.CapacityReservationPreference +'
             },
             UserData="""""",
             BlockDeviceMappings=[
