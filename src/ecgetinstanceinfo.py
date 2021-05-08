@@ -17,7 +17,7 @@ class EcGetinstanceinfo:
             InstanceIds=[
                 'self.Instanceids',
             ],
-            DryRun=True | False,
+            DryRun=self.dryrunEnabled,
             MaxResults=123,
             NextToken='string'
         )
