@@ -18,7 +18,7 @@ class EcCreateInstance:
             KeyName=self.KeyName,
             SecurityGroupIds=[
 
-                self.SecGroup
+                'self.SecGroup'
 
             ],
             InstanceType=self.InstanceType,
