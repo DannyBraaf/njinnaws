@@ -4,7 +4,7 @@ title: AWS
 description: |
   AWS-Integration
 actions:
-  EC2CreateInstance:
+  ec2CreateInstance:
      title: AWS Create EC2 Instance
      description: Create Ec2 Instance in AWS
      path: actions:ec2CreateInstance
