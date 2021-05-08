@@ -3,7 +3,7 @@ name: AWS
 title: AWS
 description: |
   AWS-Integration
-config-schemes:
+#config-schemes:
   #authentication:
   #  type: object
   #  title: Authentication Information
@@ -22,8 +22,8 @@ actions:
    description: Create Ec2 Instance in AWS
    path: actions:ec2CreateInstance
    icon: fab fa-aws
-     parameters:
-       dryrunEnabled:
+   parameters:
+      dryrunEnabled:
         type: string
         title: Dry Run
         required: true
