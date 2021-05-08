@@ -95,8 +95,8 @@ actions:
         description: true=will be deleted false=will not be deleted
         order: 130
   ec2terminateinstance:
-    title: AWS Create EC2 Instance
-    description: Create and Start Ec2 Instance on AWS
+    title: AWS Terminate EC2 Instance
+    description: Terminate Ec2 Instance on AWS
     path: src.ecterminateinstance:EcTerminateInstance
     icon: fab fa-aws
     parameters:
