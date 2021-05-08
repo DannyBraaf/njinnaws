@@ -16,14 +16,14 @@ class EcCreateInstance:
             DryRun=self.dryrunEnabled,
             KeyName=self.KeyName,
             SecurityGroupIds=[
-                self.secGroup
+                'self.secGroup'
             ],
-            InstanceType=self.InstanceType,
+            InstanceType='self.InstanceType',
             Placement={
                 'Tenancy': 'default'
             },
             Monitoring={
-                'Enabled': self.MonitoringEnabled
+                'Enabled': 'self.MonitoringEnabled'
             },
             DisableApiTermination=False,
             InstanceInitiatedShutdownBehavior=self.InstanceShutdownbehavior,
