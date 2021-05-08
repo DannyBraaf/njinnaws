@@ -7,7 +7,14 @@ class EcGetinstanceinfo:
 
 
 
-
+        my_config = Config(
+            region_name=self.region,
+            signature_version='v4',
+            retries={
+                'max_attempts': 10,
+                'mode': 'standard'
+            }
+        )
 
 
         client = boto3.client('ec2')
@@ -21,7 +28,7 @@ class EcGetinstanceinfo:
                 },
             ],
             InstanceIds=[
-                'self.Instanceids',
+                self.Instanceids,
             ],
             DryRun=self.dryrunEnabled,
             MaxResults=123,

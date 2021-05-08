@@ -6,7 +6,7 @@ class EcTerminateInstance:
 
     def run(self):
         my_config = Config(
-            region_name='self.region',
+            region_name=self.region,
             signature_version='v4',
             retries={
                 'max_attempts': 10,
