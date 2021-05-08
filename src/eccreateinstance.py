@@ -19,7 +19,7 @@ class EcCreateInstance:
                 self.SecGroup
 
             ],
-            InstanceType="'"+self.InstanceType+"'",
+            InstanceType=self.InstanceType,
             Placement={
                 'Tenancy': 'default'
             },
@@ -27,7 +27,7 @@ class EcCreateInstance:
                 'Enabled': self.MonitoringEnabled
             },
             DisableApiTermination=False,
-            InstanceInitiatedShutdownBehavior="'"+self.InstanceShutdownbehavior+"'",
+            InstanceInitiatedShutdownBehavior=+self.InstanceShutdownbehavior,
             CreditSpecification={
                 'CpuCredits': 'CpuCredits'
             },
@@ -36,7 +36,7 @@ class EcCreateInstance:
             # Open = Adds Instance to any existing Reserved Capacity that is available
             # None = Runs as On-Demand instance (First Come First Served)
             CapacityReservationSpecification={
-                'CapacityReservationPreference': "'"+self.CapacityReservationPreference+"'"
+                'CapacityReservationPreference': +self.CapacityReservationPreference+
             },
             UserData="""""",
             BlockDeviceMappings=[
