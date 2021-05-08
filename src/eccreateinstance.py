@@ -6,9 +6,6 @@ class EcCreateInstance:
     def run(self):
 
         ec2 = boto3.resource('ec2')
-        
-        sec = self.secGroup
-        secgroup = print("[""'"+ sec +"'""]")
 
         # create a new EC2 instance
         instances = ec2.create_instances(
@@ -17,7 +14,11 @@ class EcCreateInstance:
             MinCount=self.MinCount,
             DryRun=self.dryrunEnabled,
             KeyName=self.KeyName,
-            SecurityGroupIds=secgroup,
+            SecurityGroupIds=[
+
+                self.SecGroup
+
+            ],
             InstanceType="'"+self.InstanceType+"'",
             Placement={
                 'Tenancy': 'default'
