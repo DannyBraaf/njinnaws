@@ -35,7 +35,7 @@ class EcCreateInstance:
             CapacityReservationSpecification={
                 'CapacityReservationPreference': self.CapacityReservationPreference
             },
-            UserData="""""",
+            UserData="""self.userData""",
             BlockDeviceMappings=[
                 {
                     'DeviceName': '/dev/xvda',
