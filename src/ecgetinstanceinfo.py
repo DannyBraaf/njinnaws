@@ -7,13 +7,13 @@ class EcGetinstanceinfo:
     def run(self):
 
         client = boto3.client('ec2', region_name=self.region)
-        Myec2 = client.describe_instances(
-            InstanceIds=[
-                self.Instanceids,
+        list1 = [self.Instanceids]
+        InstanceIds=[
+                list1,
             ],
             DryRun=self.dryrunEnabled,
             MaxResults=123,
             NextToken='string')
-        print(Myec2)
+       
 
         return Myec2
