@@ -148,9 +148,9 @@ actions:
         required: true
         description: AWS Region 
         order: 30
-    ec2listallregions:
-        title: AWS list regions
-        description: AWS list all regions
-        path: src.eclistallregions:Execute
-        icon: fab fa-aws
-        order: 40
+  ec2listallregions:
+      title: AWS list regions
+      description: AWS list all regions
+      path: src.eclistallregions:Execute
+      icon: fab fa-aws
+      order: 40
