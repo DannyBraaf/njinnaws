@@ -18,7 +18,7 @@ class EcCreateInstance:
             SecurityGroupIds=[
                 '+ self.secGroup +'
             ],
-            InstanceType=self.InstanceType,
+            InstanceType='+ self.InstanceType +',
             Placement={
                 'Tenancy': 'default'
             },
