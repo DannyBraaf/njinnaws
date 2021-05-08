@@ -2,14 +2,14 @@
 name: AWS
 title: AWS
 description: |
-  AWS-Integration
+  AWS-Integration.
 actions:
   EC2CreateInstance:
-    title: AWS Create EC2 Instance
-    description: Create Ec2 Instance in AWS
-    path: actions:ec2CreateInstance
-    icon: fab fa-aws
-    parameters:
+     title: AWS Create EC2 Instance
+     description: Create Ec2 Instance in AWS
+     path: actions:ec2CreateInstance
+     icon: fab fa-aws
+     parameters:
       dryrunEnabled:
         type: string
         title: Dry Run
