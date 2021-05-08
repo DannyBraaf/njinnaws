@@ -94,3 +94,21 @@ actions:
         required: true
         description: true=will be deleted false=will not be deleted
         order: 130
+  ec2terminateinstance:
+    title: AWS Create EC2 Instance
+    description: Create and Start Ec2 Instance on AWS
+    path: src.ecterminateinstance:EcTerminateInstance
+    icon: fab fa-aws
+    parameters:
+      dryrunEnabled:
+        type: boolean
+        title: Dry Run
+        required: true
+        description: Dry Run flag to test Action (yes or no)
+        order: 10
+    Instanceids:
+        type: string
+        title: AWS Instance IDs
+        required: true
+        description: AWS Ec2 Instance IDs to Terminate (separate by ,)
+        order: 20
