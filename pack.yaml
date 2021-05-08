@@ -4,12 +4,12 @@ title: AWS
 description: |
   AWS-Integration
 actions:
- EC2CreateInstance:
-   title: AWS Create EC2 Instance
-   description: Create Ec2 Instance in AWS
-   path: actions:ec2CreateInstance
-   icon: fab fa-aws
-   parameters:
+  EC2CreateInstance:
+    title: AWS Create EC2 Instance
+    description: Create Ec2 Instance in AWS
+    path: actions:ec2CreateInstance
+    icon: fab fa-aws
+    parameters:
       dryrunEnabled:
         type: string
         title: Dry Run
@@ -38,7 +38,7 @@ actions:
         type: string
         title: Key Pair Name
         required: true
-        description: Path to AWS Key Pair 
+        description: Path to AWS Key Pair
         order: 50
       SecGroup:
         type: string
@@ -63,22 +63,22 @@ actions:
         title: Ebs Optimized enabled
         required: true
         description: Ebs Optimized enabled true or false
-        order: 80
+        order: 90
       CapacityReservationPreference:
         type: string
         title: Capacity Reservation Specification
         required: true
-        description:  none = starts On-Demand Instance open = starts instance into an existing reserved capacity of its type 
-        order: 90
+        description: none or open
+        order: 100
       VolumesizeinGB:
         type: string
         title: Attachted Volume size in GB
         required: true
-        description:  size of the volume that will be attached to the instance
-        order: 100
+        description: size of the volume that will be attached to the instance
+        order: 120
       DeleteVolumeonTerminationenabled:
         type: string
         title: Delete Volume on instance Termination
         required: true
         description: true = will be deleted false= will not be deleted
-        order: 110 
+        order: 130
