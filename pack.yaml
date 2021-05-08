@@ -7,7 +7,7 @@ actions:
   ec2CreateInstance:
      title: AWS Create EC2 Instance
      description: Create Ec2 Instance in AWS
-     path: actions:ec2CreateInstance
+     path: actions:ec2CreateInstance.Ec2CreateInstance
      icon: fab fa-aws
      parameters:
       dryrunEnabled:
