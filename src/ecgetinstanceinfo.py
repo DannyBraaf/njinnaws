@@ -2,7 +2,7 @@ import boto3
 from botocore.config import Config
 
 
-class EcGetinstanceinfo:
+class Execute:
 
     def run(self):
 

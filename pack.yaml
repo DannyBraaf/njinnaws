@@ -127,7 +127,7 @@ actions:
   ec2getinstanceinfo:
     title: AWS get EC2 Instance info
     description: get EC2 Instance info
-    path: src.ecgetinstanceinfo:EcGetinstanceinfo
+    path: src.ecgetinstanceinfo:Execute
     icon: fab fa-aws
     parameters:
       dryrunEnabled:
@@ -151,6 +151,6 @@ actions:
     ec2listallregions:
         title: AWS list regions
         description: AWS list all regions
-        path: src.ecgetinstanceinfo:EcGetinstanceinfo
+        path: src.eclistallregions:Execute
         icon: fab fa-aws
         order: 40
