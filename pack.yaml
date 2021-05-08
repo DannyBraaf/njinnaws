@@ -94,6 +94,12 @@ actions:
         required: true
         description: true or false
         order: 130
+      region:
+        type: string
+        title: AWS region
+        required: true
+        description: AWS Region 
+        order: 20
   ec2terminateinstance:
     title: AWS Terminate EC2 Instance
     description: Terminate Ec2 Instance on AWS
@@ -112,6 +118,12 @@ actions:
         required: true
         description: AWS Ec2 Instance IDs to Terminate (separate by ,)
         order: 20
+      region:
+        type: string
+        title: AWS region
+        required: true
+        description: AWS Region 
+        order: 20
   ec2getinstanceinfo:
     title: AWS get EC2 Instance info
     description: get EC2 Instance info
@@ -129,4 +141,10 @@ actions:
         title: AWS Instance IDs
         required: true
         description: AWS Ec2 Instance IDs to Terminate (separate by ,)
+        order: 20
+      region:
+        type: string
+        title: AWS region
+        required: true
+        description: AWS Region 
         order: 20
