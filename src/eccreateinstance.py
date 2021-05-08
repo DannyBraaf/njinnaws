@@ -8,6 +8,7 @@ class EcCreateInstance:
 
         ec2 = boto3.resource('ec2',region_name=self.region)
         list1 = [self.SecGroup]
+        listToStr = ' '.join(map(str, list1)
 
         # create a new EC2 instance
         instances = ec2.create_instances(
@@ -17,11 +18,11 @@ class EcCreateInstance:
             MinCount=self.MinCount,
             DryRun=self.dryrunEnabled,
             KeyName=self.KeyName,
-            SecurityGroupIds=
+            SecurityGroupIds=[
 
-                list1
+                listToStr
 
-            ,
+            ],
             InstanceType=self.InstanceType,
             Placement={
                 'Tenancy': 'default'
