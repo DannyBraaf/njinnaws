@@ -56,4 +56,4 @@ class EcCreateInstance:
         instances[0].reload()
         PublicIpAddress = instances[0].public_ip_address
         privateIpAddress = instances[0].private_ip_address     
-        return {"instanceid": instanceid,"PublicIpAddress":PublicIpAddress,"privateIpAddress" : privateIpAddress}
+        return {"instanceid": instanceid, "PublicIpAddress": PublicIpAddress, "privateIpAddress" : privateIpAddress}
