@@ -1,5 +1,5 @@
 import boto3
-class Ec2CreateInstance():
+class Ec2CreateInstance:
 ec2 = boto3.resource('ec2')
 
 # create a new EC2 instance
