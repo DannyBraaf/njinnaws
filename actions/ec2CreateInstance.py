@@ -55,7 +55,7 @@ time.sleep(20)
 #while instances[0].public_ip_address = '':
 #       print(instances[0].public_ip_address) 
 #       time.sleep(10)
-#       instances[0].update()
+#       instances[0].update()sdfsdfdf
 
 instances[0].reload()
 PublicIpAddress = instances[0].public_ip_address

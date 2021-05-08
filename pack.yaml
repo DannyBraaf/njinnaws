@@ -3,27 +3,14 @@ name: AWS
 title: AWS
 description: |
   AWS-Integration
-config-schemes:
-  #authentication:
-  #  type: object
-  #  title: Authentication Information
-  #  required: false
-  #  description: Authentication Information
-  #  properties:
-  #    token:
-  #      type: string
-  #      title: Access Token
-  #      required: true
-  #      description: Token used to authenticate with Slack ('https://api.slack.com/custom-integrations/legacy-tokens')
-  #      order: 10
 actions:
   EC2CreateInstance:
-    title: AWS Create EC2 Instance
-    description: Create Ec2 Instance in AWS
-    path: actions:ec2CreateInstance
-    icon: fab fa-aws
-    parameters:
-       dryrunEnabled:
+     title: AWS Create EC2 Instance
+     description: Create Ec2 Instance in AWS
+     path: actions:ec2CreateInstance
+     icon: fab fa-aws
+     parameters:
+      dryrunEnabled:
         type: string
         title: Dry Run
         required: true
@@ -51,7 +38,7 @@ actions:
         type: string
         title: Key Pair Name
         required: true
-        description: Path to AWS Key Pair 
+        description: Path to AWS Key Pair
         order: 50
       SecGroup:
         type: string
@@ -71,29 +58,27 @@ actions:
         required: true
         description: what the instance does on shutdown (stop or terminate)
         order: 80
+      EbsOptimizedenabled:
+        type: string
+        title: Ebs Optimized enabled
+        required: true
+        description: Ebs Optimized enabled true or false
+        order: 90
       CapacityReservationPreference:
         type: string
         title: Capacity Reservation Specification
         required: true
-        description:  none = starts On-Demand Instance open = starts instance into an existing reserved capacity of its type 
-        order: 90
+        description: none or open
+        order: 100
       VolumesizeinGB:
         type: string
         title: Attachted Volume size in GB
         required: true
-        description:  size of the volume that will be attached to the instance
-        order: 100
-    DeleteVolumeonTerminationenabled:
+        description: size of the volume that will be attached to the instance
+        order: 120
+      DeleteVolumeonTerminationenabled:
         type: string
         title: Delete Volume on instance Termination
         required: true
         description: true = will be deleted false= will not be deleted
-        order: 110 
-#      authentication:
-#        $ref: "#authentication"
-#        order: 30
-#    output:
-#      response:
-#        title: API response
-#        description: API repsonse for message sent
- 
+        order: 130
