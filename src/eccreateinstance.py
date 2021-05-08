@@ -53,7 +53,7 @@ class EcCreateInstance:
 
         instances[0].reload
 
-        time.sleep(20)
+        #time.sleep(20)
 
         # while instances[0].public_ip_address = '':
         #       print(instances[0].public_ip_address)
