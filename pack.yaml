@@ -147,4 +147,10 @@ actions:
         title: AWS region
         required: true
         description: AWS Region 
-        order: 20
+        order: 30
+    ec2listallregions:
+        title: AWS list regions
+        description: AWS list all regions
+        path: src.ecgetinstanceinfo:EcGetinstanceinfo
+        icon: fab fa-aws
+        order: 40
