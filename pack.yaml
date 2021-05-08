@@ -14,7 +14,7 @@ actions:
         type: boolean
         title: Dry Run
         required: true
-        description: Dry Run flag to test Action (yes or no)
+        description: true or false
         order: 10
       imageId:
         type: string
@@ -56,7 +56,7 @@ actions:
         type: boolean
         title: Monitoring Enabled
         required: true
-        description: Monitoring for Instance enabled (true or false)
+        description: true or false
         order: 70
       InstanceShutdownbehavior:
         type: string
@@ -68,7 +68,7 @@ actions:
         type: boolean
         title: Ebs Optimized enabled
         required: true
-        description: Ebs Optimized enabled (true or false)
+        description: true or false
         order: 90
       CapacityReservationPreference:
         type: string
@@ -92,7 +92,7 @@ actions:
         type: boolean
         title: Delete Volume on instance Termination
         required: true
-        description: true=will be deleted false=will not be deleted
+        description: true or false
         order: 130
   ec2terminateinstance:
     title: AWS Terminate EC2 Instance
@@ -104,9 +104,9 @@ actions:
         type: boolean
         title: Dry Run
         required: true
-        description: Dry Run flag to test Action (yes or no)
+        description: true or false
         order: 10
-    Instanceids:
+      Instanceids:
         type: string
         title: AWS Instance IDs
         required: true
