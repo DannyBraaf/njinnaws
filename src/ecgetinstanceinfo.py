@@ -11,8 +11,7 @@ class EcGetinstanceinfo:
             InstanceIds=[
                 self.Instanceids
             ],
-            DryRun=self.dryrunEnabled,
-            NextToken='string')
-       
+            DryRun=self.dryrunEnabled
+        )
 
         return Myec2
