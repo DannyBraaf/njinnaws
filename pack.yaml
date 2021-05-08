@@ -46,6 +46,12 @@ actions:
         required: true
         description: Security Groups to Attach to the Instance (separate by ,)
         order: 60
+      InstanceType:
+        type: string
+        title: Instance Type
+        required: true
+        description: Ec2 Instance Type (t2.small, t2.medium etc.)
+        order: 60
       MonitoringEnabled:
         type: boolean
         title: Monitoring Enabled
