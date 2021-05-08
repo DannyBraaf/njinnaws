@@ -28,9 +28,6 @@ class EcCreateInstance:
             },
             DisableApiTermination=False,
             InstanceInitiatedShutdownBehavior=self.InstanceShutdownbehavior,
-            CreditSpecification={
-                'CpuCredits': 'CpuCredits'
-            },
             EbsOptimized=self.EbsOptimizedenabled,
             # https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CapacityReservationSpecification.html
             # Open = Adds Instance to any existing Reserved Capacity that is available
