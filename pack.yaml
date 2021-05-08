@@ -18,11 +18,11 @@ config-schemes:
   #      order: 10
 actions:
   EC2CreateInstance:
-    title: AWS Create EC2 Instance
-    description: Create Ec2 Instance in AWS
-    path: actions:ec2CreateInstance
-    icon: fab fa-aws
-    parameters:
+   title: AWS Create EC2 Instance
+   description: Create Ec2 Instance in AWS
+   path: actions:ec2CreateInstance
+   icon: fab fa-aws
+     parameters:
        dryrunEnabled:
         type: string
         title: Dry Run
@@ -83,7 +83,7 @@ actions:
         required: true
         description:  size of the volume that will be attached to the instance
         order: 100
-    DeleteVolumeonTerminationenabled:
+      DeleteVolumeonTerminationenabled:
         type: string
         title: Delete Volume on instance Termination
         required: true
