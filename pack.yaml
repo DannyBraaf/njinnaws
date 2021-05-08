@@ -6,7 +6,7 @@ description: |
 actions:
   ec2createinstance:
      title: AWS Create EC2 Instance
-     description: Create Ec2 Instance in AWS
+     description: Create and Start Ec2 Instance in AWS
      path: src.ec2.ec2createinstance:Ec2CreateInstance
      icon: fab fa-aws
      parameters:
