@@ -53,25 +53,7 @@ class EcCreateInstance:
 
         instances[0].reload
 
-        #time.sleep(20)
-
-        # while instances[0].public_ip_address = '':
-        #       print(instances[0].public_ip_address)
-        #       time.sleep(10)
-        #       instances[0].update()sdfsdfdf
-
         instances[0].reload()
         PublicIpAddress = instances[0].public_ip_address
-        privateIpAddress = instances[0].private_ip_address
-        # while PublicIpAddress != 'none':
-        #    instances[0].reload()
-        #    time.sleep(10)
-        #    print(PublicIpAddress)
-        #    PublicIpAddress = instances[0].public_ip_address
-
-        result = {'instanceid': instanceid, 'PublicIpAddress': PublicIpAddress,
-                  'privateIpAddress': privateIpAddress}
-        print(PublicIpAddress)
-        print(instanceid)
-        print(result)
-        return {"instanceid": instanceid}
+        privateIpAddress = instances[0].private_ip_address     
+        return {"instanceid": instanceid,"PublicIpAddress":PublicIpAddress,"privateIpAddress" : privateIpAddress}

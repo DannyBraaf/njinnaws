@@ -14,7 +14,7 @@ actions:
         type: boolean
         title: Dry Run
         required: true
-        description: Dry Run Flag to test Action (yes or no)
+        description: Dry Run flag to test Action (yes or no)
         order: 10
       imageId:
         type: string
@@ -38,13 +38,13 @@ actions:
         type: string
         title: Key Pair Name
         required: true
-        description: Path to AWS Key Pair
+        description: AWS Key Pair Name
         order: 50
       SecGroup:
         type: string
         title: Security Groups
         required: true
-        description: Security Groups to Attach to the Instance (separate by ,)
+        description: Security Groups to Attach to the Instance (separate multiple by ,)
         order: 60
       InstanceType:
         type: string
@@ -78,7 +78,7 @@ actions:
         order: 100
       userData:
         type: text
-        title: user data
+        title: User Data
         required: false
         description: script to execute on startup of instance
         order: 100
@@ -92,5 +92,5 @@ actions:
         type: boolean
         title: Delete Volume on instance Termination
         required: true
-        description: true = will be deleted false= will not be deleted
+        description: true=will be deleted false=will not be deleted
         order: 130
