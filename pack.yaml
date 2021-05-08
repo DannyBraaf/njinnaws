@@ -11,7 +11,7 @@ actions:
      icon: fab fa-aws
      parameters:
       dryrunEnabled:
-        type: string
+        type: boolean
         title: Dry Run
         required: true
         description: Dry Run Flag to test Action (yes or no)
@@ -47,10 +47,10 @@ actions:
         description: Security Groups to Attach to the Instance (separate by ,)
         order: 60
       MonitoringEnabled:
-        type: string
+        type: boolean
         title: Monitoring Enabled
         required: true
-        description: Monitoring for Instance enabled (yes or no)
+        description: Monitoring for Instance enabled (true or false)
         order: 70
       InstanceShutdownbehavior:
         type: string
@@ -59,10 +59,10 @@ actions:
         description: what the instance does on shutdown (stop or terminate)
         order: 80
       EbsOptimizedenabled:
-        type: string
+        type: boolean
         title: Ebs Optimized enabled
         required: true
-        description: Ebs Optimized enabled true or false
+        description: Ebs Optimized enabled (true or false)
         order: 90
       CapacityReservationPreference:
         type: string
@@ -77,13 +77,13 @@ actions:
         description: script to execute on startup of instance
         order: 100
       VolumesizeinGB:
-        type: string
+        type: integer
         title: Attachted Volume size in GB
         required: true
         description: size of the volume that will be attached to the instance
         order: 120
       DeleteVolumeonTerminationenabled:
-        type: string
+        type: boolean
         title: Delete Volume on instance Termination
         required: true
         description: true = will be deleted false= will not be deleted
