@@ -14,11 +14,7 @@ class EcCreateInstance:
             MinCount=self.MinCount,
             DryRun=self.dryrunEnabled,
             KeyName=self.KeyName,
-            SecurityGroupIds=[
-
-                self.secGroup
-
-            ],
+            SecurityGroupIds="['"+self.secGroup+"']",
             InstanceType="'"+self.InstanceType+"'",
             Placement={
                 'Tenancy': 'default'
