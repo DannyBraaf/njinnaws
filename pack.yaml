@@ -58,6 +58,12 @@ actions:
         required: true
         description: what the instance does on shutdown (stop or terminate)
         order: 80
+      EbsOptimizedenabled:
+        type: string
+        title: Ebs Optimized enabled
+        required: true
+        description: Ebs Optimized enabled true or false
+        order: 80
       CapacityReservationPreference:
         type: string
         title: Capacity Reservation Specification
