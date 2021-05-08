@@ -1,0 +1,99 @@
+---
+name: AWS
+title: AWS
+description: |
+  AWS-Integration
+config-schemes:
+  #authentication:
+  #  type: object
+  #  title: Authentication Information
+  #  required: false
+  #  description: Authentication Information
+  #  properties:
+  #    token:
+  #      type: string
+  #      title: Access Token
+  #      required: true
+  #      description: Token used to authenticate with Slack ('https://api.slack.com/custom-integrations/legacy-tokens')
+  #      order: 10
+actions:
+  EC2CreateInstance:
+    title: AWS Create EC2 Instance
+    description: Create Ec2 Instance in AWS
+    path: actions:ec2CreateInstance
+    icon: fab fa-aws
+    parameters:
+       dryrunEnabled:
+        type: string
+        title: Dry Run
+        required: true
+        description: Dry Run Flag to test Action (yes or no)
+        order: 10
+      imageId:
+        type: string
+        title: AWS Image ID
+        required: true
+        description: AWS Image Id (Private or Marketplace) to create Instance from
+        order: 20
+      MinCount:
+        type: integer
+        title: Minimum amount of EC2 Instance to Start
+        required: true
+        description: Minimum amount of Ec2 Instances to Start
+        order: 30
+      MaxCount:
+        type: integer
+        title: Maximum amount of EC2 Instance to Start
+        required: true
+        description: Maximum amount of Ec2 Instances to Start
+        order: 40
+      KeyName:
+        type: string
+        title: Key Pair Name
+        required: true
+        description: Path to AWS Key Pair 
+        order: 50
+      SecGroup:
+        type: string
+        title: Security Groups
+        required: true
+        description: Security Groups to Attach to the Instance (separate by ,)
+        order: 60
+      MonitoringEnabled:
+        type: string
+        title: Monitoring Enabled
+        required: true
+        description: Monitoring for Instance enabled (yes or no)
+        order: 70
+      InstanceShutdownbehavior:
+        type: string
+        title: Instance Shutdown behavior
+        required: true
+        description: what the instance does on shutdown (stop or terminate)
+        order: 80
+      CapacityReservationPreference:
+        type: string
+        title: Capacity Reservation Specification
+        required: true
+        description:  none = starts On-Demand Instance open = starts instance into an existing reserved capacity of its type 
+        order: 90
+      VolumesizeinGB:
+        type: string
+        title: Attachted Volume size in GB
+        required: true
+        description:  size of the volume that will be attached to the instance
+        order: 100
+    DeleteVolumeonTerminationenabled:
+        type: string
+        title: Delete Volume on instance Termination
+        required: true
+        description: true = will be deleted false= will not be deleted
+        order: 110 
+#      authentication:
+#        $ref: "#authentication"
+#        order: 30
+#    output:
+#      response:
+#        title: API response
+#        description: API repsonse for message sent
+ 

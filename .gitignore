@@ -1,0 +1,12 @@
+*.pyc
+__pycache__
+
+.vscode
+
+.ipynb_checkpoints
+*.ipynb
+
+Pipfile
+Pipfile.lock
+
+test.py
