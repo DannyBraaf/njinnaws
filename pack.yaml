@@ -239,7 +239,7 @@ actions:
         description: Instance Protocol (http or https)
         order: 70
       SSLCertificateId:
-        type: integer
+        type: string
         title:  SSLCertificateId
         required: false
         description:  SSLCertificateId
