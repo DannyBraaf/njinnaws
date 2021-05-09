@@ -6,9 +6,9 @@ class Execute:
 
     def run(self):
 
-        ec2 = boto3.client('ec2', region_name=self.region)
-     
-        instances = ec2.instances.filter(
-            Filters=[{'Name': 'instance-state-name', 'Values': [self.instancestate]}])
+         ec2 = boto3.resource('ec2')
+         for instance in ec2.instances.all():
+         print (instance.id , instance.state)
     
-        return instances
+    
+        return ec2.instances.all()
