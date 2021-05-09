@@ -18,7 +18,3 @@ class Execute:
           dict1.append(dict2)
          
       return dict1
-
-
-
-x.update(d)
