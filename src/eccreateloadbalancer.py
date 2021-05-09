@@ -7,7 +7,7 @@ class Execute:
 
         client = boto3.client('ec2'. region_name=self.region)
         response = client.create_load_balancer(
-            LoadBalancerName='string',
+            LoadBalancerName=self.name,
             Listeners=[
                 {
                     'Protocol': self.Protokol,
