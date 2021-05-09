@@ -202,60 +202,66 @@ actions:
         required: true
         description: true or false
         order: 10
+      name:
+        type: string
+        title: Loadbalancer Name
+        required: true
+        description: Loadbalancer Name 
+        order: 20
       region:
         type: string
         title: AWS region
         required: true
         description: AWS Region 
-        order: 20
+        order: 30
       Protokol:
         type: string
         title: Load Balancer Protokol
         required: true
         description: Load Balancer Protokol (http or https)
-        order: 30
+        order: 40
       LoadBalancerPort:
         type: integer
         title: Load Balancer Port
         required: true
         description: Load Balancer Port
-        order: 30
+        order: 50
       InstancePort:
         type: integer
         title: Instance Port
         required: true
         description: Instance Port
-        order: 30
+        order: 60
       SSLCertificateId:
         type: integer
         title:  SSLCertificateId
         required: false
         description:  SSLCertificateId
-        order: 30
+        order: 70
       AvailabilityZones:
         type: string
         title: availability Zone
         required: true
         description: cailability Zone
-        order: 30
+        order: 80
       subnet:
         type: string
         title: subnets
-        required: true
+        required: false
         description: subnets
-        order: 30
+        order: 90
       SecurityGroups:
         type: string
         title: Security Groups
         required: true
         description: Security Groups
-        order: 30
+        order: 100
       Scheme:
         type: string
         title: Scheme
-        required: true
+        required: false
         description: Scheme
-        order: 30
+        order: 110
 
 
 
