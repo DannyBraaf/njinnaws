@@ -228,9 +228,9 @@ actions:
         order: 30
       SSLCertificateId:
         type: integer
-        title: Instance Port
-        required: true
-        description: Instance Port
+        title:  SSLCertificateId
+        required: false
+        description:  SSLCertificateId
         order: 30
       AvailabilityZones:
         type: string
