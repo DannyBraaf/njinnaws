@@ -22,6 +22,6 @@ class Execute:
                   "instance_private_ip_address": instance.private_ip_address,
                   "instance_architecture": instance.architecture,
                   "instance_launch_time": instance.launch_time}
-          dict1.update["instance.id"](dict2)
+          dict1.update(dict2)
 
       return dict1
