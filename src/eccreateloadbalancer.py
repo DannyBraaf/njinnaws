@@ -5,7 +5,7 @@ class Execute:
 
     def run(self):
 
-        client = boto3.client('ec2', region_name=self.region)
+        client = boto3.resource('ec2', region_name=self.region)
         response = client.create_load_balancer(
             LoadBalancerName=self.name,
             Listeners=[
