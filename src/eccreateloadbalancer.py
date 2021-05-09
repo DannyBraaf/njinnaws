@@ -10,27 +10,28 @@ class Execute:
       # List all regions
         client = boto3.client('ec2')
         response = client.create_load_balancer(
-        LoadBalancerName='string',
-        Listeners=[
-                    {
-                        'Protocol': self.Protokol,
-                        'LoadBalancerPort': self.LoadBalancerPort,
-                        'InstanceProtocol': self.InstanceProtocol,
-                        'InstancePort': self.InstancePort,
-                        'SSLCertificateId': self.SSLCertificateId
-                    },
-                ],
-                AvailabilityZones=[
-                    self.AvailabilityZones,
-                ],
-                Subnets=[
-                    self.subnet,
-                ],
-                SecurityGroups=[
-                    self.SecurityGroups,
-                ],
-                Scheme=self.Scheme
-        return response       
+              LoadBalancerName='string',
+              Listeners=[
+                          {
+                              'Protocol': self.Protokol,
+                              'LoadBalancerPort': self.LoadBalancerPort,
+                              'InstanceProtocol': self.InstanceProtocol,
+                              'InstancePort': self.InstancePort,
+                              'SSLCertificateId': self.SSLCertificateId
+                          },
+                      ],
+                      AvailabilityZones=[
+                          self.AvailabilityZones,
+                      ],
+                      Subnets=[
+                          self.subnet,
+                      ],
+                      SecurityGroups=[
+                          self.SecurityGroups,
+                      ],
+                      Scheme=self.Scheme)
+                
+               return response  
       
       
       
