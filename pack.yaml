@@ -183,7 +183,7 @@ actions:
         title: Instance state
         required: true
         description: search for Instance in Instance state (running, stopped, terminated)
-        order: 30
+        order: 20
       region:
         type: string
         title: AWS region
