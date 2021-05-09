@@ -8,6 +8,6 @@ class Execute:
 
         ec2 = boto3.resource('ec2')
         for instance in ec2.instances.all():
-          print(instance.id, instance.state)
+         list1 += [instance.id, instance.state]
 
-          return ec2.instances.all
+          return list1
