@@ -6,7 +6,7 @@ class Execute:
   def run(self):
 
       ec2 = boto3.resource('ec2', region_name='eu-west-1')
-      dict1 = {}
+      dict1 = []
       instances = ec2.instances.filter(
           Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
 
