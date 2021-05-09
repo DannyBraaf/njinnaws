@@ -10,4 +10,4 @@ class Execute:
         for instance in ec2.instances.all():
           print(instance.id, instance.state)
 
-          return ec2.instances.all()
+          return ec2.instances.all
