@@ -13,8 +13,7 @@ class Execute:
       for instance in instances:
           print(instance.id, instance.instance_type, instance.vpc.id, instance.subnet.id,
                 instance.state['Name'], instance.public_ip_address, instance.private_ip_address, instance.architecture, instance.launch_time)
-          dict2 = [instance.id, instance.instance_type, instance.vpc.id, instance.subnet.id,
-                instance.state['Name'], instance.public_ip_address, instance.private_ip_address, instance.architecture, instance.launch_time]
+          dict2 = [instance.id, instance.instance_type, instance.vpc.id, instance.subnet.id, instance.state['Name'], instance.public_ip_address, instance.private_ip_address, instance.architecture, instance.launch_time]
           # print(dict1)
           dict1.append(dict2)
          
