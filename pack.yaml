@@ -216,9 +216,9 @@ actions:
         order: 30
       Protokol:
         type: string
-        title: Load Balancer Protokol
+        title: Load Balancer Protocol
         required: true
-        description: Load Balancer Protokol (http or https)
+        description: Load Balancer Protocol (http or https)
         order: 40
       LoadBalancerPort:
         type: integer
@@ -232,36 +232,42 @@ actions:
         required: true
         description: Instance Port
         order: 60
+      InstanceProtocol:
+        type: string
+        title: Instance Protocol
+        required: true
+        description: Instance Protocol (http or https)
+        order: 70
       SSLCertificateId:
         type: integer
         title:  SSLCertificateId
         required: false
         description:  SSLCertificateId
-        order: 70
+        order: 80
       AvailabilityZones:
         type: string
         title: availability Zone
         required: true
         description: cailability Zone
-        order: 80
+        order: 90
       subnet:
         type: string
         title: subnets
         required: false
         description: subnets
-        order: 90
+        order: 100
       SecurityGroups:
         type: string
         title: Security Groups
         required: true
         description: Security Groups
-        order: 100
+        order: 110
       Scheme:
         type: string
         title: Scheme
         required: false
         description: Scheme
-        order: 110
+        order: 120
 
 
 
