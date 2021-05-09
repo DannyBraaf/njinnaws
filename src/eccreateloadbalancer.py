@@ -26,6 +26,7 @@ class Execute:
             SecurityGroups=[
                 self.SecurityGroups,
             ],
-            Scheme=self.Scheme)
+            Scheme=self.Scheme
+        )
 
         return response
