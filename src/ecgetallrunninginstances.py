@@ -13,4 +13,4 @@ class Execute:
         for instance in instances:
             print(instance.id, instance.instance_type)
 
-        return instances instance.instance_type
+        return instances
