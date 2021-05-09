@@ -190,3 +190,72 @@ actions:
         required: true
         description: AWS Region 
         order: 30
+  ec2createloadbalancer:
+    title: AWS create loadbalancer
+    description: AWS create loadbalancer
+    path: src.eccreateloadbalancer:Execute
+    icon: fab fa-aws
+    parameters:
+      dryrunEnabled:
+        type: boolean
+        title: Dry Run
+        required: true
+        description: true or false
+        order: 10
+      region:
+        type: string
+        title: AWS region
+        required: true
+        description: AWS Region 
+        order: 20
+      Protokol:
+        type: string
+        title: Load Balancer Protokol
+        required: true
+        description: Load Balancer Protokol (http or https)
+        order: 30
+      LoadBalancerPort:
+        type: integer
+        title: Load Balancer Port
+        required: true
+        description: Load Balancer Port
+        order: 30
+      InstancePort:
+        type: integer
+        title: Instance Port
+        required: true
+        description: Instance Port
+        order: 30
+      SSLCertificateId:
+        type: integer
+        title: Instance Port
+        required: true
+        description: Instance Port
+        order: 30
+      AvailabilityZones:
+        type: string
+        title: availability Zone
+        required: true
+        description: cailability Zone
+        order: 30
+      subnet:
+        type: string
+        title: subnets
+        required: true
+        description: subnets
+        order: 30
+      SecurityGroups:
+        type: string
+        title: Security Groups
+        required: true
+        description: Security Groups
+        order: 30
+      Scheme:
+        type: string
+        title: Scheme
+        required: true
+        description: Scheme
+        order: 30
+
+
+
