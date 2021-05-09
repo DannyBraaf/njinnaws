@@ -5,10 +5,7 @@ class Execute:
 
     def run(self):
 
-        ec2 = boto3.resource('ec2', region_name=self.region)
-
-      # List all regions
-        client = boto3.client('ec2')
+        client = boto3.client('ec2'. region_name=self.region)
         response = client.create_load_balancer(
             LoadBalancerName='string',
             Listeners=[
