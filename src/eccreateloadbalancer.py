@@ -17,7 +17,7 @@ class Execute:
                         'LoadBalancerPort': self.LoadBalancerPort,
                         'InstanceProtocol': self.InstanceProtocol,
                         'InstancePort': self.InstancePort,
-                        'SSLCertificateId': self.SSLCertificateId:
+                        'SSLCertificateId': self.SSLCertificateId
                     },
                 ],
                 AvailabilityZones=[
