@@ -169,7 +169,7 @@ actions:
   ec2listallinstanceidsinregion:
     title: AWS list all instance ids in region
     description: AWS list all instance ids in region
-    path: src.getallrunninginstances:Execute
+    path: src.ecgetallrunninginstances:Execute
     icon: fab fa-aws
     parameters:
       dryrunEnabled:
