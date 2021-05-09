@@ -1,8 +1,27 @@
 import boto3
-   ec2 = boto3.resource('ec2')
-   for instance in ec2.instances.all():
-          print(
-          "Id: {0}\nPlatform: {1}\nType: {2}\nPublic IPv4: {3}\nAMI: {4}\nState: {5}\n".format(
-            instance.id, instance.platform, instance.instance_type, instance.public_ip_address, instance.image.id, instance.state
-          )
-          )
+
+
+class Execute:
+   
+
+ec2 = boto3.resource('ec2', region_name='eu-west-1')
+
+instances = ec2.instances.filter(
+    Filters=[{'Name': 'instance-state-name', 'Values': ['running']}])
+
+for instance in instances:
+    print(instance.id, instance.instance_type, instance.vpc.id, instance.subnet.id,
+          instance.state['Name'], instance.public_ip_address, instance.private_ip_address, instance.architecture, instance.launch_time)
+    dict1 = {"instance_id"   : instance.id,
+            "instance_type" : instance.instance_type,
+            "instance_vpc_id" : instance.vpc.id,
+            "instance_subnet_id" : instance.subnet.id,
+            "instance_state" : instance.state['Name'],
+            "instance_public_ip_address" : instance.public_ip_address,
+            "instance_private_ip_address" : instance.private_ip_address,
+            "instance_architecture" : instance.architecture,
+            "instance_launch_time" : instance.launch_time}
+    #print(dict1)
+    
+    return dict1
+    
