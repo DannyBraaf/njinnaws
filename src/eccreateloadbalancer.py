@@ -38,7 +38,7 @@ class Execute:
                         'Protocol': self.Protokol,
                         'LoadBalancerPort': self.LoadBalancerPort,
                         'InstanceProtocol': self.InstanceProtocol,
-                        'InstancePort': self.InstancePort   
+                        'InstancePort': self.InstancePort,   
                         'SSLCertificateId': self.SSLCertificateId                     
                     },
                 ],
